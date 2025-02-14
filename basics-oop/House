@@ -1,0 +1,28 @@
+package basics_oop;
+
+public class House {
+
+    private Address address;
+    private int roomsCount;
+    private double price;
+    private double lotArea;
+    private double livingArea;
+    
+    public House (double price, Address address, int roomsCount, double lotArea, double livingArea) {
+        this.price = price;
+        this.address = address;
+        this.roomsCount = roomsCount;
+        this.lotArea = lotArea;
+        this.livingArea = livingArea;
+    }
+    
+    public static void main(String[] args) {
+        Address address = new Address("Fischerweg", 9, "Kaufering", 83451);
+        House house = new House(879900, address, 5, 1000, 135.5);
+        System.out.println(house);
+    }
+
+    public String toString() {
+        return String.format("Haus Details:\n\tKaufpreis: %.2f €\n\t%s\n\tZimmer Anzahl: %d\n\tGrundstück: %.2f m²\n\tWohnfläche: %.2f m²", price, address, roomsCount, lotArea, livingArea);
+    }
+}
