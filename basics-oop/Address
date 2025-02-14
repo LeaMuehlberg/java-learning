@@ -1,0 +1,25 @@
+package basics_oop;
+
+public class Address {
+
+    private String streetName;
+    private String city;
+    private int streetNumber;
+    private int postalCode;
+
+    public Address(String streetName, int streetNumber, String city, int postalCode) {
+        this.streetName = streetName;
+        this.streetNumber = streetNumber;
+        this.city = city;
+        this.postalCode = postalCode;
+    }
+
+    public static void main(String[] args) {
+        Address address = new Address("Fischerweg", 9, "Kaufering", 83294);
+        System.out.println(address);
+    }
+
+    public String toString() {
+        return String.format("Adresse: %s %d, %s %d", streetName, streetNumber, city, postalCode);
+    }
+}
